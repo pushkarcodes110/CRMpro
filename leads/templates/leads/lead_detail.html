@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .lead{
+            padding-top: 10px;
+            padding-bottom: 10px;
+            padding-left: 6px;
+            padding-right: 6px;
+            margin-top: 10px;
+            background-color: aliceblue;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <a href="{% url 'leads:lead-list' %}">Go back to Leads</a>
+    <hr>
+    <h1>This is Details of {{ lead.first_name }}</h1>
+    <p>AGE: {{lead.age}}</p>
+    <h3>Agent Allocated to you is: {{lead.agent}} </h3>
+    <hr>
+    <a href="{% url 'leads:lead-update' lead.pk %}">Update a Lead</a>
+    <a href="{% url 'leads:lead-delete' lead.pk %}">Delete a Lead</a>
+
+    
+    
+</body>
+</html>

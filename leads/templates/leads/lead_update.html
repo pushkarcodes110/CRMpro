@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <a href="{% url 'leads:lead-detail' lead.pk %}">Go back to Leads</a>
+    <hr>
+    <h1>Create new Lead here</h1>
+    <form method="post" action=".">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Enter</button>
+    </form>
+   
+    
+    
+</body>
+</html>
